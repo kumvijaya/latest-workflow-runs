@@ -8,6 +8,11 @@ This takes below parameters
 - **-f | --outfile**: Optional. Output csv file name (Ex: *code-ql-runs.csv*), If not provided, it generates output file as *output.csv*
 - **--verbose**: Optional. The flag to run the script in debug mode
 
+This provides csv output with below fields:
+- **Repo**: Repository name
+- **Latest Run Result**: Latest run result. success or failure. It will be empty incase workflow not found.
+- **Error**: The error message. It will be empty incase of success result.
+
 This creates output
 ## How to run
 
@@ -21,7 +26,7 @@ Execute the script
     python get-latest-workflow-runs.py --org $ORG_NAME --workflow $WORKFLOW_FILE_NAME
 ```
 
-Examples:
+## Examples
 ```
     python get-latest-workflow-runs.py --org my-org --workflow code-ql.yml
 ```

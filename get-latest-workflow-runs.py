@@ -123,7 +123,7 @@ def get_error_run_info(message):
 def write_csv(data, filename):
     print_debug("Writing to CSV")
     with open(filename, 'w', newline='') as csv_file:
-        fieldnames = ['repo', 'result', 'message']
+        fieldnames = ['Repo', 'Latest Run Result', 'Error']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
         for row in data:
