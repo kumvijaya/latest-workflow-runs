@@ -125,6 +125,7 @@ def write_csv(data, filename):
         writer.writeheader()
         for row in data:
             writer.writerow(row)
+    print_debug("Writing to CSV completed")
 
 repos = get_repositories()
 repo_run_list = []
