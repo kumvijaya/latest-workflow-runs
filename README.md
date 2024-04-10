@@ -9,9 +9,9 @@ This takes below parameters
 - **--verbose**: Optional. The flag to run the script in debug mode
 
 This provides csv output with below fields:
-- **Repo**: Repository name
-- **Latest Run Result**: Latest run result. success or failure. It will be empty incase workflow not found.
-- **Error**: The error message. It will be empty incase of success result.
+- **repo**: Repository name
+- **result**: Latest run result. success or failure. It will be empty incase workflow not found.
+- **message**: The error message. It will be empty incase of success result.
 
 This creates output
 ## How to run

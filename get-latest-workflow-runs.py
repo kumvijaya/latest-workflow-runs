@@ -50,9 +50,6 @@ def print_debug(msg):
     if verbose:
         print(f"verbose: {msg}")
 
-def get_owner():
-    return org if org else user
-
 def get_items_with_pagination(url):
     output = []
     page = 1
@@ -123,7 +120,7 @@ def get_error_run_info(message):
 def write_csv(data, filename):
     print_debug("Writing to CSV")
     with open(filename, 'w', newline='') as csv_file:
-        fieldnames = ['Repo', 'Latest Run Result', 'Error']
+        fieldnames = ['repo', 'result', 'message']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
         for row in data:
