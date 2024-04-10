@@ -1,6 +1,6 @@
 # Latest workflow runs
 
-This gets the result of latest runs of the given workflow.
+This gets the result of latest runs for the given workflow.
 
 This takes below parameters
 - **-o | --org**: Required. GitHub Organization name
