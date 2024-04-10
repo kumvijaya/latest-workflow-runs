@@ -26,7 +26,7 @@ parser.add_argument(
 parser.add_argument(
     '-f',
     '--outfile',
-    required=True,
+    required=False,
     help='Provide output file name (ex: code-ql-runs.yml)')
 
 parser.add_argument('--verbose', action='store_true')

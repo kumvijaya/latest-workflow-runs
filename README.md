@@ -35,6 +35,10 @@ Execute the script
 ```
     python get-latest-workflow-runs.py --org my-org --workflow code-ql.yml
 ```
+To run with output file
+```
+    python get-latest-workflow-runs.py --org my-org --workflow code-ql.yml --outfile code-ql-output.csv
+```
 To run with debug mode
 ```
     python get-latest-workflow-runs.py --org my-org --workflow code-ql.yml --verbose
