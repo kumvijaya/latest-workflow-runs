@@ -120,12 +120,13 @@ def get_run_message(run_url):
     messages = []
     run_jobs_url = f'{run_url}/jobs'
     run_jobs_json = gh_get(run_jobs_url)
-    failed_job = next((job for job in run_jobs_json['jobs'] if job['conclusion'] != "success"), None)
-    failed_job_annotations_url = f"{failed_job['check_run_url']}/annotations"
-    failed_job_annotations_json = gh_get(failed_job_annotations_url)
-    for annotation in failed_job_annotations_json:
-        messages.append(annotation['message'])
-    return messages.join("|")
+    for job in run_jobs_json['jobs']:
+        if job['conclusion'] != "success":
+            annotations_url = f"{job['check_run_url']}/annotations"
+            annotations_json = gh_get(annotations_url)
+            for annotation in annotations_json:
+                messages.append(annotation['message'])
+    return "|".join(messages)
 
 def get_error_run_info(message):
     output = {}
