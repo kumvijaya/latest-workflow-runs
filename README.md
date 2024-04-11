@@ -11,6 +11,7 @@ This takes below parameters
 This provides csv output with below fields:
 - **repo**: Repository name
 - **result**: Latest run result. success or failure. It will be empty incase workflow not found in the repo.
+- **url**: Latest run url. It will be empty incase workflow not found in the repo.
 - **message**: The error message. It will be empty incase of success result.
 
 This creates output
